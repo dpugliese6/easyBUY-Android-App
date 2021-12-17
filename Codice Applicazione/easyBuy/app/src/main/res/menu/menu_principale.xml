@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:menuCategory="container"
+        android:title="Funzionalità">
+
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/menu_carrelli"
+                    android:icon="@drawable/carrelli"
+                    android:title="Carrelli" />
+                <item
+                    android:id="@+id/menu_liste"
+                    android:icon="@drawable/liste"
+                    android:title="Liste" />
+                <item
+                    android:id="@+id/menu_supermercati"
+                    android:icon="@drawable/supermercati"
+                    android:title="Supermercati" />
+            </group>
+        </menu>
+
+
+    </item>
+
+
+    <item
+        android:menuCategory="container"
+        android:title="Altro">
+
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/menu_profilo"
+                    android:icon="@drawable/profilo"
+                    android:title="Profilo" />
+                <item
+                    android:id="@+id/menu_esci"
+                    android:icon="@drawable/esci"
+                    android:title="Esci" />
+
+            </group>
+        </menu>
+
+
+    </item>
+
+
+
+
+
+
+
+</menu>

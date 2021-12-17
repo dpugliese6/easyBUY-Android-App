@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.easybuy" >
+
+    <uses-permission android:name="android.permission.CAMERA" /> <!--per qr-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"
+    />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/easybuylogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/easybuylogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+
+        tools:ignore="GoogleAppIndexingWarning"><!--per qr-->
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" /><!--per qr-->
+
+        <activity android:name=".caricamento" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login" android:noHistory="true">
+        </activity>
+        <activity android:name=".registrazione" android:noHistory="true">
+        </activity>
+        <activity android:name=".home" android:noHistory="true">
+        </activity>
+        <activity android:name=".risultati" android:noHistory="true">
+        </activity>
+        <activity android:name=".liste" android:noHistory="true">
+        </activity>
+        <activity android:name=".carrelli" android:noHistory="true">
+        </activity>
+        <activity android:name=".supermercati" android:noHistory="true">
+        </activity>
+        <activity android:name=".profilo" android:noHistory="true">
+        </activity>
+        <activity android:name=".modifica_password" android:noHistory="true">
+        </activity>
+        <activity android:name=".scanner" android:noHistory="true">
+        </activity>
+        <activity android:name=".prodotti_lista" android:noHistory="true">
+        </activity>
+        <activity android:name=".prodotti_carrello" android:noHistory="true">
+        </activity>
+        <activity android:name=".crea_lista_carrello" android:noHistory="true">
+        </activity>
+        <activity android:name=".condividi" android:noHistory="true">
+        </activity>
+        <activity android:name=".confronta" android:noHistory="true">
+        </activity>
+        <activity android:name=".scegli" android:noHistory="true">
+        </activity>
+        <activity android:name=".percorso" android:noHistory="true">
+        </activity>
+        <activity android:name=".supermercato" android:noHistory="true" >
+        </activity>
+        <activity android:name=".categoria"  android:noHistory="true">
+        </activity>
+        <activity android:name=".supermercato_prodotti" android:noHistory="true">
+        </activity>
+    </application>
+
+</manifest>

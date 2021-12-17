@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".home"
+    tools:openDrawer="start"
+  android:id="@+id/home_layout">
+    <!---->
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/menu_laterale"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/testata_menu"
+        app:menu="@menu/menu_principale">
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
+
+            <EditText
+                android:id="@+id/campo_prodotto"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Nome prodotto"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@android:drawable/status_bar_item_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scritta_cerca" />
+
+            <TextView
+                android:id="@+id/scritta_cerca"
+                android:layout_width="214dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/mikan"
+                android:gravity="center"
+                android:text="Cerca prodotti"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <ImageButton
+                android:id="@+id/tasto_cerca"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorAccent"
+                android:tint="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scritta_cerca"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
+            <TextView
+                android:id="@+id/testo_oppure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="oppure"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campo_prodotto" />
+
+            <Button
+                android:id="@+id/tasto_scan"
+                android:layout_width="221dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/mikan"
+                android:text="Scansiona codice a barre"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/testo_oppure" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
